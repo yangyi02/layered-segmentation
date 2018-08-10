@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a Matlab implementation of the layered object segmentation algorithm described in [1, 2]. The algorithm utilizes the object detection results obtained from deformable part-based models [3] with superpixels obtained from [4], and builds a Bayesian inference framework towards the semantic and instance segmentation of objects in PASCAL VOC dataset [5]. 
+This is a Matlab implementation of the layered object segmentation algorithm described in [1, 2]. The algorithm utilizes the object detection results obtained from deformable part-based models [3] with superpixels obtained from [4], and builds a Bayesian inference framework towards the semantic and instance segmentation of multi-class objects in PASCAL VOC dataset [5]. 
 
 Acknowledgements: We graciously thank the authors of the previous code releases and image benchmarks for making them publically available.
 
