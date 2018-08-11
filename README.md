@@ -8,11 +8,8 @@ Acknowledgements: We graciously thank the authors of the previous code releases 
 
 ## Using the code
 
-1. Move to the `code_basic` directory
 2. Start Matlab (version > 2013a).
-3. Run `compile.m` to compile the helper functions. (You may also edit `compile.m` to use a different convolution routine depending on your system.)
-4. Run `demo.m` to see the detection code run on sample images.
-5. By default, the code is set to output the highest-scoring detection in an image.
+4. Run `demo.m` to see the segmentation code run on sample images.
 
 ## References
 
