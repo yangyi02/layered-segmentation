@@ -33,7 +33,7 @@ boxdetind = ones(1,D); % initial solution for all detections
 % get biasfield for each detection
 
 % sort biasfield by ascending, this method is called compositing
-[segscoresort,sortind] = sort(bbox(:,30),'descend');
+[segscoresort, sortind] = sort(bbox(:,30),'descend');
 
 leftprob = ones(H,W);
 
@@ -82,7 +82,7 @@ end
 biasfieldvec(D+1,:) = reshape(leftprob,WH,1); % background bias field
 
 % initialize segmentation simply from bias field
-[maxPr ind] = max(biasfieldvec);
+[maxPr, ind] = max(biasfieldvec);
 
 % start iteration
 for iter = 1:Para.MaxIter
@@ -126,7 +126,7 @@ for iter = 1:Para.MaxIter
     for m = 1:M
         indm = (imsuper == m);
         indm = reshape(indm,1,WH);
-        [maxsumlogPr ind(indm)] = max(sum(logPr(:,indm),2));
+        [maxsumlogPr, ind(indm)] = max(sum(logPr(:,indm),2));
     end
 
     diffnum = sum(ind_old~=ind);

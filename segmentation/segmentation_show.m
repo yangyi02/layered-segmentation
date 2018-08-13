@@ -29,7 +29,7 @@ load([ids{n} '_t=16.mat']); % load superpixels
 imsuper = labels;
 clear labels;
 
-[H W c] = size(im); % get image size
+[H, W, c] = size(im); % get image size
 WH = H*W;
 
 M = max(imsuper(:)); % get number of superpixels
@@ -143,7 +143,7 @@ Pr(D+1,:) = tmpPr;
 % bgbiasfield = imresize(bgbias,[H,W],'bilinear');
 % biasfieldvec(D+1,:) = reshape(bgbiasfield,WH,1);
 % Pr(D+1,:) = biasfieldvec(D+1,:);
-[maxPr ind] = max(Pr);
+[maxPr, ind] = max(Pr);
 
 for iter = 1:MaxIter
 %     if iter + 3 > 10
@@ -196,7 +196,7 @@ for iter = 1:MaxIter
     for m = 1:M
         indm = (imsuper == m);
         indm = reshape(indm,1,WH);
-        [maxsumlogPr indsuper(m)] = max(sum(logPr(:,indm),2));
+        [maxsumlogPr, indsuper(m)] = max(sum(logPr(:,indm),2));
 %         [probmax,ind] = max(Pr);
         ind(indm) = indsuper(m);
     end

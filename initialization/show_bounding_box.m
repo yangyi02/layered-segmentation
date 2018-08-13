@@ -1,4 +1,4 @@
-function showboundingbox(im,objbox,objboxind,boxdetind,col,VOCopts)
+function show_bounding_box(im,objbox,objboxind,boxdetind,col,VOCopts)
 
 % view detection for each image
 imagesc(im); axis image; axis off; hold on;
@@ -6,7 +6,7 @@ imagesc(im); axis image; axis off; hold on;
 D = length(objboxind);
 
 if D > 0
-    [score ind] = sort(objbox(:,30));
+    [score, ind] = sort(objbox(:,30));
 
     for d = 1:D
         if boxdetind(ind(d)) == 1

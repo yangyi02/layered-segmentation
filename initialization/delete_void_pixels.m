@@ -8,7 +8,7 @@ for i = 1:N
     imsegcls = double(imread(sprintf(VOCopts.seg.clsimgpath,ids{i})));
     imsegobj = double(imread(sprintf(VOCopts.seg.instimgpath,ids{i})));
     
-    [H W] = size(imsegcls);
+    [H, W] = size(imsegcls);
 
     subplot(221); imagesc(imsegcls); axis image;
     subplot(222); imagesc(imsegobj); axis image;
@@ -29,10 +29,10 @@ for i = 1:N
         imsegcls(ind_255) = 0;
         imsegobj(ind_255) = 0;
             
-        [D,L] = bwdist(imsegcls);
+        [D, L] = bwdist(imsegcls);
         imsegcls(ind_255) = imsegcls(L(ind_255));
         
-        [D,L] = bwdist(imsegobj);
+        [D, L] = bwdist(imsegobj);
         imsegobj(ind_255) = imsegobj(L(ind_255));
     end
     subplot(223); imagesc(imsegcls); axis image;
