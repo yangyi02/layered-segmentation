@@ -8,8 +8,7 @@ Acknowledgements: We graciously thank the authors of the previous code releases 
 
 ## Using the code
 
-2. Start Matlab (version > 2013a).
-4. Run `demo.m` to see the segmentation code run on sample images.
+The code is actually not runnable anymore. The main code is used for a proof of concept. 
 
 ## References
 
