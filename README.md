@@ -8,7 +8,9 @@ Acknowledgements: We graciously thank the authors of the previous code releases 
 
 ## Using the code
 
-The code is actually not runnable anymore. The main code is used for a proof of concept. 
+The Matlab code is actually not runnable anymore. The repo is only used for a proof of concept. 
+
+The codes are mainly located in `initialization`, `bias field` and `segmentation`, where `bias field` contains the bias field learning code and `segmentation` contains the layered segmentation inference code.
 
 ## References
 
